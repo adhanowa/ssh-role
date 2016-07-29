@@ -3,7 +3,7 @@
 - name: Change ssh port
   lineinfile: dest=/etc/ssh/sshd_config
               regexp="^Port\s"
-              line="Port {{ ubuntu_common_ssh_port }}"
+              line="Port {{ ssh_port }}"
               state=present
   notify: Restart ssh
 
@@ -20,3 +20,7 @@
               line="PermitRootLogin no"
               state=present
   notify: Restart ssh
+
+- name: Install mosh
+  apt: name=mosh state=latest update_cache=yes
+  when: ssh_install_mosh

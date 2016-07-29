@@ -1,2 +1,7 @@
 ---
 # defaults file for mbreisch.ssh-role
+# Ensure below 1024
+ssh_port: 1022
+ssh_install_mosh: yes
+ssh_mosh_from_port: 60000
+ssh_mosh_to_port: 60010
