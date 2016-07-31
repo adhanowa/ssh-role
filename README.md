@@ -6,7 +6,7 @@ Hardens the ssh daemon and optionally installs mosh.
 Requirements
 ------------
 
-It is recommended to setup an non-root account with passwordless authentication before running this. If you do not
+It is recommended to set up a non-root account with passwordless authentication before running this. If you do not
 heed this warning, you may get locked out of your server. You can run mbreisch.deploy-user-role to do this.
 
 Role Variables
