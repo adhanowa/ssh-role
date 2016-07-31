@@ -1,22 +1,27 @@
-Role Name
+SSH Role
 =========
 
-A brief description of the role goes here.
+Hardens the ssh daemon and optionally installs mosh.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+It is recommended to setup an non-root account with passwordless authentication before running this. If you do not
+heed this warning, you may get locked out of your server. You can run mbreisch.deploy-user-role to do this.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Defaults:
+* ssh_port: 1022
+* ssh_install_mosh: yes
+* ssh_mosh_from_port: 60000
+* ssh_mosh_to_port: 60010
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+mbreisch.ufw-role to add port rules for the ssh daemon and if chosen, mosh.
 
 Example Playbook
 ----------------
