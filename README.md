@@ -21,7 +21,8 @@ Defaults:
 Dependencies
 ------------
 
-mbreisch.ufw-role to add port rules for the ssh daemon and if chosen, mosh.
+There are no dependencies. However, if using ufw or any firewall you will need to create rules for ssh and/or mosh.
+You can use mbreisch.ufw-role to add port rules.
 
 Example Playbook
 ----------------
