@@ -1,6 +1,8 @@
 SSH Role
 =========
 
+[![Build Status](https://travis-ci.org/mbreisch/ssh-role.svg?branch=master)](https://travis-ci.org/mbreisch/ssh-role)
+
 Hardens the ssh daemon and optionally installs mosh.
 
 Requirements
